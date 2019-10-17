@@ -144,20 +144,136 @@
                     </div>
             </section>
             <section class="section">
-                <div class="container"></div>
+                <div class="container">
+                    <h2 class="section__title text-center">Sponsorship</h2>
+                    <ul class="sponsors">
+                        <li class="sponsor">
+                            <a href="" class="sponsor__link">
+                                <img src="img/clients-01.png" alt="" class="sponsor__img">
+                            </a>
+                        </li>
+                        <li class="sponsor">
+                            <a href="" class="sponsor__link">
+                                <img src="img/clients-02.png" alt="" class="sponsor__img">
+                            </a>
+                        </li>
+                        <li class="sponsor">
+                            <a href="" class="sponsor__link">
+                                <img src="img/clients-03.png" alt="" class="sponsor__img">
+                            </a>
+                        </li>
+                        <li class="sponsor">
+                            <a href="" class="sponsor__link">
+                                <img src="img/clients-04.png" alt="" class="sponsor__img">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </section>
-            <section class="section">
-                <div class="container"></div>
-            </section>
-            <section class="section">
-                <div class="container"></div>
+            <section class="section section--bg-pink">
+                <div class="container">
+                        <h2 class="section__title text-center">Jury 2017</h2>
+                        <div class="users">
+                                <div class="user user--round">
+                                    <div class="user__wrap"><img class="user__img" src="img/kyle-loftus-589739-unsplash@2x.jpg" alt="Kyle Loftus"></div>
+                                    <div class="user__name">Kyle Loftus</div>
+                                    <div class="user__position">Creative Director at Amazing Game</div>
+                                </div>
+                                <div class="user user--round">
+                                    <div class="user__wrap"><img class="user__img" src="img/pete-bellis-435777-unsplash@2x.png" alt="Pete Bellis"></div>
+                                    <div class="user__name">Pete Bellis</div>
+                                    <div class="user__position">Creative Director at Amazing Game</div>
+                                </div>
+                                <div class="user user--round">
+                                    <div class="user__wrap"><img class="user__img" src="img/joe-gardner-149699-unsplash@2x.jpg" alt="Joe Gardner"></div>
+                                    <div class="user__name">Joe Gardner</div>
+                                    <div class="user__position">Creative Director at Amazing Game</div>
+                                </div>
+                </div>
             </section>       
-        </main>
-        <footer>
+        <section class="section">
+                <div class="container">
+                        <div class="text-center">
+                            <h2 class="section__title">Contact Us</h2>
+                            <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec sollicitudin molestie malesuada.</p>
+                        </div>
+                        <form action="" method="POST" name="contact" class="form-contact">
+                            <div class="row">
+                                <div class="col">
+                                <input class="form-contact__input" required type="text" name="firstname" id="firstname">
+                                <label class="form-contact__label" for="firstname">First Name</label>
+                            </div>
+                                <div class="col">
+                                <input class="form-contact__input" required type="text" name="lastname">
+                                <label class="form-contact__label" for="firstname" id="lastname">Last Name</label>
+                            </div>
+                        </div>
+                            <div class="row">
+                                <div class="col">
+                                <input class="form-contact__input" required type="email" name="email" id="email">
+                                <label class="form-contact__label" for="email">Email</label>
+                            </div>
+                                <div class="col">
+                                <input class="form-contact__input" required type="url" name="website">
+                                <label class="form-contact__label" for="website" id="website">Website</label>
+                            </div>
+                            </div>
+                            <div class="row">
+                                <div class="col col--lg">
+                                <textarea class="form-contact__input" name="message" id="message" rows="7"></textarea>
+                                <label class="form-contact__label" for="message">Message</label>
+                            </div>
+                        </div>
+                        <div class="row row--right">
+                            <button type="submit" class="btn btn--dark btn--sharp">Send Message</button>
+                        </div>
+                        </form>
+                    </div>
+                </section>
+                    </main>
+        <footer class="section text-center">
             <div class="container">
+                <h3>Newsletter</h3>
+                <p class="text-center text-medium">If you would like to hear first and to receive updates please subscribe to our newsletter.</p>
+                <form action="" method="POST" name="subscribe" class="form-subscribe">  
+                <input class="form-subscribe__input" type="email" name="email" placeholder="email address">
+                <button class="btn" type="submit">Subscribe</button>
+            </form>
+            <ul class="socials">
+                <li class="social">
+                    <a href="#" class="social__link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="social">
+                    <a href="#" class="social__link">
+                        <i class="fab fa-dribbble"></i>
+                    </a>
+                </li>
+                <li class="social">
+                    <a href="#" class="social__link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="social">
+                    <a href="#" class="social__link">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                </li>
+            </ul>
             </div>
         </footer>
-        <script src="https://kit.fontawesome.com/b34164f37f.js" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/b34164f37f.js" crossorigin="anonymous"></script>
+        <script>
+            let inputs = document.querySelectorAll('.form-contact__input');
+
+            inputs.forEach(function(input) {
+                input.addEventListener('change', function () {
+                    if (this.value.length > 0) {
+                        this.classList.add('filled');
+                    }
+                })
+            });
         </script>
 </body>
 </html>
